@@ -1,0 +1,10 @@
+TRICK 
+
+Can use DFS to do level by level summation in a tree. We do this by comparing the length of the array which stores the sum at each level to the level we currently are at. 
+If length(arr)==level 
+then
+we append the value of the node to the array as it means we have not seen this level before.(Remember array index is 0 indexed so when len==level it means we have seen 0 to 
+level-1 and not the current level)
+
+else
+  we add the node.val to the sum stored at that level
