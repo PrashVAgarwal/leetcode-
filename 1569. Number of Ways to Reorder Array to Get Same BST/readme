@@ -1,1 +1,8 @@
+We only see the permutations in the left subtree as when the positions for elements in the left subtree are selected, the elements in the right subtree have to occupy the 
+remaining positions in one way only so as to maintain their relative positions.eg
+[5,4,3,7,8]
+so left subtree has [4,3]
+and right subtree has [7,8]
 
+so for left subtree elements we can pick 2C4 permutations as we are selecting 2 out to 4 positions. 
+So the right subtree elements can occupy the remaining positions in only one way as 7 has to come before 8 to have the same BST
