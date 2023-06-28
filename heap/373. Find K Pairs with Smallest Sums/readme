@@ -1,0 +1,17 @@
+Q. You are given two integer arrays nums1 and nums2 sorted in ascending order and an integer k.
+
+Define a pair (u, v) which consists of one element from the first array and one element from the second array.
+
+Return the k pairs (u1, v1), (u2, v2), ..., (uk, vk) with the smallest sums.
+
+For this question we use a min heap to get the minimum sum pairs at the root of the heap.
+At every iteration we choose i+1, j and i, j+1 pairs as the lists are sorted so the minimum sums will lie at one of these positions as minimum elements are the begining of the 
+lists.
+To avoid duplication, we need to maintain a set as we may encounter the same pairs again. eg. 
+We start with (0,0) and add (1,0) and (0,1) to the heap.
+Suppose (1,0) is min and so is popped. So, we add (i+1,j) and (i,j+1) pairs => (2,0) and (1,1)
+So our heap has (0,1), (2,0) and (1,1)
+Suppose (0,1) is the min so we need to push (1,1) and (0,2) to the heap. But (1,1) is already present, so we need to keep track of visited pairs to avoid pushing them again to
+the heap.
+
+Good video for this question - https://www.youtube.com/watch?v=GbYUDowP3wg
