@@ -1,0 +1,19 @@
+https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/discuss/718239/Thinking-Process%3A-Greedy-Segment-Tree
+
+Greedy
+For each day, there are a set of events attendable, and let's think about
+
+Which one shall we attend among attendable events for a day?
+Among the open events for a day, the one ends earliest should be attended.
+
+How shall we tell which open event ends earliest?
+We may maintain a min heap of open events sorted by end time for each day.
+
+What are attendable events?
+For day t, an event (start, end) is attendable if start <= t <= end and not attended yet
+
+To promise start <= t <= end, we can add an event to the min heap when we are at day start; and remove events with end < t at day t.
+
+To achieve not attended yet, we might sort events by start time at the beginning, and loop through sorted events using i, where events before i are either attended or not attendable.
+
+This approach's time complexity is O(nlogn) where n is the number of events.
