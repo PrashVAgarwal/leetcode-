@@ -1,1 +1,4 @@
-
+can use the adding the parents approach or just use the BST feature (smaller than root on left and greater than root on right):
+if both p and q > root -> go to root.right 
+elif both p and q < root -> go to root.left
+else: we found the LCA
