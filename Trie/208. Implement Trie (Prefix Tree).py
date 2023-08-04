@@ -42,3 +42,5 @@ class Trie:
 # obj.insert(word)
 # param_2 = obj.search(word)
 # param_3 = obj.startsWith(prefix)
+
+# good video - https://www.youtube.com/watch?v=oobqoCJlHA0
