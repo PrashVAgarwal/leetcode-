@@ -28,5 +28,5 @@ class Solution:
                         
             dp[(lower,upper)]=ans
             return dp[(lower,upper)]
-        
+         
         return fun(1,n)
